@@ -1,0 +1,36 @@
+// 스프링 설정 파일이라고 보면 된다.
+
+// 프로젝트 버젼 설정
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.1'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+
+
+group = 'hello'
+version = '0.0.1-SNAPSHOT'
+
+// 프로젝트의 java 버젼은 17이다.
+java {
+	sourceCompatibility = '17'
+}
+
+// dependencies에 작성한 라이브러리들을 다운받을 경로 설정
+// mavenCentral이라는 사이트에서 가져오란 뜻임 // 다른 사이트를 원하면 해당 사이트 주소를 넣어주면 된다.
+repositories {
+	mavenCentral()
+}
+
+
+//
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
