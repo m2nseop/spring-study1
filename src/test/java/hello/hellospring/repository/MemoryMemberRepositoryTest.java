@@ -15,7 +15,7 @@ public class MemoryMemberRepositoryTest {
     // @Test 함수들은 repository내의 필드변수 객체를 동시에 사용하기 때문에 매번 clear 해줘야한다.
     @AfterEach
     public void afterEach(){
-        repository.clear();
+        repository.clearStore();
     }
 
     // 나와야만 하는 값이 expected, 즉 예상되는 값

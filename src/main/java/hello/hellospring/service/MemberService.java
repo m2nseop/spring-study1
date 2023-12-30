@@ -9,8 +9,15 @@ import java.util.Optional;
 // 핵심 비즈니스 로직 구현
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    // command + shift + T -> 해당 클래스의 테스트 클래스를 package까지 만들어줌;;
+
+    private final MemberRepository memberRepository;
     // java interface에 대해서 좀 알아볼 것
+
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원 가입
@@ -27,7 +34,7 @@ public class MemberService {
         Optional<Member> result = memberRepository.findByName(member.getName());
 
         result.ifPresent(m -> { // 만약 같은 이름이 있는 회원이 있다면? 에 대한 예외처리
-            throw new IllegalArgumentException("이미 존재하는 회원입니다.");
+            throw new IllegalStateException("이미 존재하는 회원입니다.");
         });
         // ifPresent는 result를 Optional로 감쌌기 때문에 사용할 수 있는 함수이다.
         // Optional을 사용하지 않았다면 if(member != null){예외처리} 이런식으로 작성했었을 것

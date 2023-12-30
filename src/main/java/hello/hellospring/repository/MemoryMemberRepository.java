@@ -40,7 +40,7 @@ public class MemoryMemberRepository implements MemberRepository{
         // store의 멤버들을 List형태로 반환한다.
     }
 
-    public void clear(){
+    public void clearStore(){
         store.clear();
     }
 }
