@@ -61,7 +61,7 @@ public class MemoryMemberRepositoryTest {
         expected2.setName("spring2");
         repository.save(expected2);
 
-        Assertions.assertThat(repository.finAll().size()).isEqualTo(2);
-        Assertions.assertThat(repository.finAll().size()).isNotEqualTo(3);
+        Assertions.assertThat(repository.findAll().size()).isEqualTo(2);
+        Assertions.assertThat(repository.findAll().size()).isNotEqualTo(3);
     }
 }

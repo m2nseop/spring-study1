@@ -1,5 +1,9 @@
 package hello.hellospring.domain;
 
+
+// 도메인 : 비즈니스 도메인 객체
+// 주로 데이터베이스에 저장하고 관리됨
+
 public class Member {
 
     private Long id;

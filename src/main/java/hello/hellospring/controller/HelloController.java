@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+// 컨트롤러: 웹 mvc의 컨트롤러 역할
+
 // 컨트롤러임을 명시하는 어노테이션
 @Controller
 public class HelloController {
