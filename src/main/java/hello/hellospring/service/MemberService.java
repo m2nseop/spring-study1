@@ -5,8 +5,11 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 // 핵심 비즈니스 로직 구현
+@Service
 public class MemberService {
 
     // command + shift + T -> 해당 클래스의 테스트 클래스를 package까지 만들어줌;;
@@ -14,7 +17,7 @@ public class MemberService {
     private final MemberRepository memberRepository;
     // java interface에 대해서 좀 알아볼 것
 
-
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
