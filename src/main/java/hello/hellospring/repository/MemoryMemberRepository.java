@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 
 // 리포지지토리: 데이터베이스에 접근, 도메인 객체를 DB에 저장하고 관리
 // 일단은 디비 대체
-@Repository
 public class MemoryMemberRepository implements MemberRepository{
     private static Map<Long, Member> store = new HashMap<>();
     // 공유되는 변수를 다룰때는 동시성 문제를 해결하기 위해 ConcurrentHashMap을 사용한다.

@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 // 핵심 비즈니스 로직 구현
-@Service
 public class MemberService {
 
     // command + shift + T -> 해당 클래스의 테스트 클래스를 package까지 만들어줌;;
